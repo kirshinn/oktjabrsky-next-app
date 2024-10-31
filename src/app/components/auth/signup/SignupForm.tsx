@@ -1,4 +1,5 @@
 import { signup } from '@/app/actions/auth';
+import Link from 'next/link';
 
 export function SignupForm() {
   return (
@@ -42,6 +43,13 @@ export function SignupForm() {
       >
         Зарегистрироваться
       </button>
+
+      <p className="mt-4 text-center text-sm text-gray-600">
+        Уже есть аккаунт в системе?{' '}
+        <Link href="/auth/login" className="text-blue-600 hover:text-blue-800">
+          Войти
+        </Link>
+      </p>
     </form>
   );
 }

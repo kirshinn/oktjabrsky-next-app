@@ -14,12 +14,7 @@ const Me = async () => {
     
     return (
         <div className="flex items-center justify-center h-screen">
-            <h1>Профиль</h1> <br />
-            <ul className="space-y-4">
-                <li>{ data.userId }</li>
-                <li>{ data.title }</li>
-                <li>{ data.body }</li>
-            </ul>
+            <h1>Профиль { data.userId }</h1>
         </div>
     );
 
