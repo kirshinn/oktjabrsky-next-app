@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import Sidebar from '@/app/components/profile/Sidebar';
+import Sidebar from '@/components/profile/Sidebar';
 
 type MenuItems = {
     [key: string]: string;
