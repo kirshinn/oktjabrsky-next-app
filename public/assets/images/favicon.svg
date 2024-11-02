@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="45" fill="#FF5733"/>
+  
+  <!-- Autumn leaf shape in white -->
+  <path d="M50 25
+           C65 30, 70 45, 65 60
+           C60 70, 50 75, 40 70
+           C35 65, 35 55, 40 45
+           C42 40, 45 35, 50 25
+           M50 25
+           C48 35, 45 45, 50 65" 
+        fill="white"/>
+</svg>
