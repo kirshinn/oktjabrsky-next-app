@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import { AuthProvider } from '@/context/AuthContext';
 import Sidebar from '@/components/profile/Sidebar';
 
 type MenuItems = {
@@ -22,15 +23,15 @@ const ProfileLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
         },
         settings: {
             name: 'Настройки',
-            path: '/settings'
+            path: '/profile/settings'
         },
         messages: {
             name: 'Сообщения',
-            path: '/messages'
+            path: '/profile/messages'
         },
         notifications: {
             name: 'Уведомления',
-            path: '/notifications'
+            path: '/profile/notifications'
         },
         video: {
             name: 'Видеотрансляция',
@@ -43,12 +44,14 @@ const ProfileLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     });
 
     return (
-        <div className="flex h-screen">
-            <Sidebar menuItems={menuItems} />
-            <main className="flex-1 p-8 bg-white">
-                {children}
-            </main>
-        </div>
+        <AuthProvider>
+            <div className="flex h-screen">
+                <Sidebar menuItems={menuItems} />
+                <main className="flex-1 p-8 bg-white">
+                    {children}
+                </main>
+            </div>
+        </AuthProvider>
     );
 };
 
