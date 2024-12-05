@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from 'react';
-import { AuthProvider } from '@/context/AuthContext';
 import Sidebar from '@/components/profile/Sidebar';
 
 type MenuItems = {
@@ -44,14 +43,12 @@ const ProfileLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     });
 
     return (
-        <AuthProvider>
-            <div className="flex h-screen">
-                <Sidebar menuItems={menuItems} />
-                <main className="flex-1 p-8 bg-white">
-                    {children}
-                </main>
-            </div>
-        </AuthProvider>
+        <div className="flex h-screen">
+            <Sidebar menuItems={menuItems} />
+            <main className="flex-1 p-8 bg-white">
+                {children}
+            </main>
+        </div>
     );
 };
 

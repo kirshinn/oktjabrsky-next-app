@@ -1,5 +1,6 @@
-import { Metadata } from 'next';
 import './globals.css';
+import { Metadata } from 'next';
+import Providers from '@/components/shared/providers';
 
 export const metadata : Metadata = {
   title: 'Площадка жителей комплекса - Сити-Квартал Октябрьский',
@@ -20,7 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body>{children}</body>
+      <body>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }
